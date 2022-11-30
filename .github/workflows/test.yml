@@ -39,7 +39,7 @@ jobs:
       - name: Make changes to pull request
         run: date +%s > report3.txt
 
-      - name: Changes in module
+      - name: Add untracked changes inside submodule
         run: date +%s > ok-server/temp.txt
 
       - name: Create Pull Request
@@ -57,7 +57,7 @@ jobs:
       - name: Make changes to pull request
         run: date +%s > report4.txt
 
-      - name: Changes in module
+      - name: Add untracked changes inside submodule
         run: date +%s > ok-server/temp.txt
 
       - name: Create Pull Request
