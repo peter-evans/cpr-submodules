@@ -2,7 +2,7 @@ name: Create Pull Request
 on: workflow_dispatch
 jobs:
   createPullRequest1:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -15,7 +15,7 @@ jobs:
           branch: test1
 
   createPullRequest2:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
@@ -30,7 +30,7 @@ jobs:
           branch: test2
 
   # createPullRequest3:
-  #   runs-on: ubuntu
+  #   runs-on: ubuntu-latest
   #   steps:
   #     - uses: actions/checkout@v3
   #       with:
