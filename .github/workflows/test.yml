@@ -29,17 +29,20 @@ jobs:
         with:
           branch: test2
 
-  # createPullRequest3:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #       with:
-  #         submodules: true
+  createPullRequest3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
 
-  #     - name: Make changes to pull request
-  #       run: date +%s > report.txt
+      - name: Make changes to pull request
+        run: date +%s > report.txt
 
-  #     - name: Create Pull Request
-  #       uses: peter-evans/create-pull-request@v4
-  #       with:
-  #         branch: test3
+      - name: Changes in module
+        run: date +%s > ok-server/temp.txt
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: test3
