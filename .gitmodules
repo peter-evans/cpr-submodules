@@ -1,0 +1,3 @@
+[submodule "ok-server"]
+	path = ok-server
+	url = git@github.com:peter-evans/ok-server.git
