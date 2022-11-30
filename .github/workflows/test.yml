@@ -1,8 +1,8 @@
 name: Create Pull Request
 on: workflow_dispatch
 jobs:
-  createPullRequest:
-    runs-on: self-hosted
+  createPullRequest1:
+    runs-on: ubuntu
     steps:
       - uses: actions/checkout@v3
 
@@ -11,3 +11,35 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
+        with:
+          branch: test1
+
+  createPullRequest2:
+    runs-on: ubuntu
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Make changes to pull request
+        run: date +%s > report.txt
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: test2
+
+  # createPullRequest3:
+  #   runs-on: ubuntu
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       with:
+  #         submodules: true
+
+  #     - name: Make changes to pull request
+  #       run: date +%s > report.txt
+
+  #     - name: Create Pull Request
+  #       uses: peter-evans/create-pull-request@v4
+  #       with:
+  #         branch: test3
